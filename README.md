@@ -2,7 +2,7 @@
 ## A Fuzzy WoLF-PHC Learning Approach with Hybrid Beamforming
 
 **Anuprabh Singh** · Department of Electronics and Communication Engineering, NIT Warangal  
-`anuprabh@student.nitw.ac.in`
+`anuprabh.2004@gmail.com`
 
 ---
 
