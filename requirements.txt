@@ -1,0 +1,7 @@
+# Core (required)
+numpy>=1.24.0
+matplotlib>=3.8.0
+scipy>=1.10.0
+
+# DQN agent backend (optional — falls back to NumPy if not installed)
+# torch>=2.0.0
