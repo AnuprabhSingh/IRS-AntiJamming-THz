@@ -71,10 +71,10 @@ plt.rcParams.update({
 METHOD_ORDER = ["q_learning", "fast_q_learning", "fuzzy_wolf_phc", "dqn", "ao_baseline"]
 
 METHOD_LABELS = {
-    "q_learning":      "Classical Q-learning",
-    "fast_q_learning": "Fast Q-learning [1]",
+    "q_learning":      "Classical Q-learning [10]",
+    "fast_q_learning": "Fast Q-learning [9]",
     "fuzzy_wolf_phc":  "Proposed fuzzy WoLF-PHC",
-    "dqn":             "DQN [12]",
+    "dqn":             "DQN [11]",
     "ao_baseline":     "AO Baseline [6]",
 }
 
@@ -207,7 +207,7 @@ def fig5_vs_pmax(out_dir: Path, sweep_file: Path | None = None) -> None:
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(IEEE_DBL_W, 3.2))
 
-    for method in METHOD_ORDER + ["ao_baseline"]:
+    for method in METHOD_ORDER:
         rates_mean, rates_std = [], []
         prots_mean, prots_std = [], []
         for pt in points:
@@ -269,7 +269,7 @@ def fig6_vs_nris(out_dir: Path, sweep_file: Path | None = None) -> None:
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(IEEE_DBL_W, 3.2))
 
-    for method in METHOD_ORDER + ["ao_baseline"]:
+    for method in METHOD_ORDER:
         rates_mean, rates_std = [], []
         prots_mean, prots_std = [], []
         for pt in points:
@@ -299,7 +299,7 @@ def fig6_vs_nris(out_dir: Path, sweep_file: Path | None = None) -> None:
         (ax1, "Average system rate (bits/s/Hz)", "(a)"),
         (ax2, "SINR protection level (%)", "(b)"),
     ]:
-        ax.set_xlabel(r"Number of RIS elements $N_{\mathrm{RIS}}$")
+        ax.set_xlabel(r"Number of IRS elements $N_{\mathrm{IRS}}$")
         ax.set_ylabel(ylabel)
         ax.grid(True)
         ax.legend(fontsize=7, framealpha=0.9, edgecolor="black", fancybox=False)
@@ -331,7 +331,7 @@ def fig7_vs_sinr(out_dir: Path, sweep_file: Path | None = None) -> None:
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(IEEE_DBL_W, 3.2))
 
-    for method in METHOD_ORDER + ["ao_baseline"]:
+    for method in METHOD_ORDER:
         rates_mean, rates_std = [], []
         prots_mean, prots_std = [], []
         for pt in points:
@@ -540,7 +540,7 @@ def fig11_sinr_cdf(out_dir: Path, cdf_file: Path | None = None) -> None:
 
     fig, ax = plt.subplots(figsize=(IEEE_COL_W * 1.6, 3.5))
 
-    for method in METHOD_ORDER + ["ao_baseline"]:
+    for method in METHOD_ORDER:
         samples = sinr_samples.get(method)
         if not samples:
             continue
@@ -583,7 +583,7 @@ def fig12_vs_pjammer(out_dir: Path, sweep_file: Path | None = None) -> None:
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(IEEE_DBL_W, 3.2))
 
-    for method in METHOD_ORDER + ["ao_baseline"]:
+    for method in METHOD_ORDER:
         rates_mean, rates_std = [], []
         prots_mean, prots_std = [], []
         for pt in points:

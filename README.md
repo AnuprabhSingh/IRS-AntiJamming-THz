@@ -232,8 +232,13 @@ IRS-AntiJamming-THz/
 │   └── ieee_plots/                 10 figures × (PDF + PNG) = 20 files
 │
 ├── paper/
-│   ├── paper_ieee.tex              IEEE LaTeX source
-│   └── paper.pdf                   Compiled 6-page manuscript
+│   ├── conference/                 Active conference submission (IEEEtran, 3 authors)
+│   │   ├── paper_ieee.tex          6-page version (compact) + compiled PDF
+│   │   └── paper_ieee_7page.tex    7-page version (full-width figures) + compiled PDF
+│   ├── journal/                    Earlier single-author journal draft
+│   │   ├── paper_ieee.tex          Journal LaTeX source + compiled PDF
+│   │   └── paper.pdf               Original compiled manuscript
+│   └── review/                     Submission + advisor-annotated review copies
 │
 ├── run_all.py                      Entry point: train + evaluate + plot
 ├── run_reproduce.sh                Shell entry point (portable)

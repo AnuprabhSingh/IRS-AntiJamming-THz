@@ -18,12 +18,21 @@ env/
 # Uncomment the next line if you want to exclude pre-computed results too:
 # outputs_joint_ao/
 
-# LaTeX build artifacts
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.bbl
-paper/*.blg
-paper/*.synctex.gz
-paper/*.fls
-paper/*.fdb_latexmk
+# LaTeX build artifacts (any directory)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Keep plain-text result logs despite *.log
+!outputs_joint_ao/*.txt
